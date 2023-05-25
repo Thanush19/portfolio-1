@@ -16,38 +16,33 @@
     background-color: rgb(30, 30, 30);
     height: 100vh;
     width: 100%;
-    color: #1E1E1E;
+    color: rgb(30, 30, 30);
 }
 .content {
     flex: 1;
     text-align: center;
-  
+    justify-content: center;
+    align-items: center;
     width: 50%;
+  
+
+  
   }
-  .img {
-    text-align: center;    
-    margin-right: 180px;   
-  }
+ 
 .name{
    
     font-weight: 800;
     font-family: Avocados Regular, sans-serif;
     font-size:45px;
-    color: #2B75E4;
+    color: wheat;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+
 
 
 }
 .name:hover {
-  color: whitesmoke;
-}
-
-.name:hover::before {
-  content: attr(data-text);
-  position: absolute;
-  left: 0;
-  text-stroke: 1.5px #2B75E4;
-  -webkit-text-stroke: 1.5px #2B75E4;
-  -webkit-text-fill-color: whitesmoke;
+  transform: scale(1.1);
+  color: #2B75E4;
 }
 
 .profession{
@@ -57,24 +52,18 @@
     color: #2B75E4;
     -webkit-text-fill-color: rgba(0, 0, 0, 0);
     
--webkit-text-stroke-color:     #2B75E4;
+-webkit-text-stroke-color:     #0568fd;
 ; 
 -webkit-text-stroke-width :1.5px;
 font-weight: 900;
 }
-/* 
-.profession:hover {
-  color: whitesmoke;
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
 }
 
-.profession:hover::before {
-  content: attr(data-text);
-  position: absolute;
-  left: 0;
-  text-stroke: 1.5px #2B75E4;
-  -webkit-text-stroke: 1.5px #2B75E4;
-  -webkit-text-fill-color: whitesmoke;
-} */
 
 .tagline {
   font-family: Mosk Ultra-Bold, sans-serif;
@@ -90,6 +79,45 @@ font-weight: 900;
   position: relative;
   display: inline-block;
   overflow: hidden;
+}
+lottie-container{
+  justify-content: center;
+    align-items: center;
+    width: 50%;
+    flex: 1;
+
+
+
+
+}
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .name {
+    font-size: 36px;
+  }
+
+  .profession {
+    font-size: 24px;
+  }
+
+  .tagline {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  .lottie-container {
+    width: 100%;
+  }
 }
 /* 
 .tagline::before {
@@ -166,3 +194,20 @@ font-weight: 900;
   -webkit-text-stroke-width: 1.5px;
 } */
  
+ /* .img {
+    text-align: center;    
+    margin-right: 180px;   
+  } */
+  /* 
+.profession:hover {
+  color: whitesmoke;
+}
+
+.profession:hover::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  text-stroke: 1.5px #2B75E4;
+  -webkit-text-stroke: 1.5px #2B75E4;
+  -webkit-text-fill-color: whitesmoke;
+} */

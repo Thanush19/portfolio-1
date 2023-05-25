@@ -5,7 +5,7 @@ import About from '../about/About'
 import Contact from '../contact/Contact'
 import Project from '../projects/Project'
 import './navbar.css'
-import logo from '../../assets/Thanush.png'
+import logo from '../../assets/Thanush-removebg-preview.png'
 
 
 const Navbar = () => {
