@@ -3,7 +3,7 @@
     justify-content: flex-end;
     align-items: center;
     
-    background-color: black;
+    background-color: rgb(30, 30, 30);
 }
 .links {
     display: flex;
@@ -17,11 +17,14 @@
 
   .logo {
     margin-right: auto;
+    background-color: transparent;
+
   }
   
   .logo img {
     width: 50px;
     height: 50px;
+    background-color: transparent;
   }
   .link {
     text-decoration: none;
