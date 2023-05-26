@@ -23,6 +23,15 @@
     font-size: 20px;
     font-weight: bold;
   }
+  .profile-heading,
+.github-icon {
+  transition: color 0.3s;
+}
+.profile-heading:hover,
+.github-icon:hover {
+  color: #2b75e4;
+}
+
   
   .icon {
     margin-top: 10px;
@@ -40,4 +49,12 @@
     font-size: 16px;
     color: #888;
   }
+  span {
+    opacity: 1;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(10px);
+  }
   
+.linkedin-logo{
+  color: wheat;
+}

@@ -2,8 +2,9 @@ import React from 'react'
 import ContactForm from './Email'
 import { motion } from 'framer-motion';
 import './contact.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FaGithub, FaLinkedin, FaLinkedinIn } from "react-icons/fa";
+
+
 
 
 const Contact = () => {
@@ -41,6 +42,7 @@ const Contact = () => {
         transition={{ duration: 0.5, delay: 0.4 }}
         className="profile-heading"
         onClick={handleGithubProfileClick}
+        
       >
         Github Profile
       </motion.h1>
@@ -52,11 +54,11 @@ const Contact = () => {
         className="linkedin-icon"
       >
         <motion.span
-          initial={{ opacity: 0, y: 10 }}
-          whileHover={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.3 }}
+        
         >
-          <FontAwesomeIcon icon={faGithub} className="icon" />
+                  <FaGithub />
+
+          
         </motion.span>
       </motion.a>
 
@@ -78,20 +80,21 @@ const Contact = () => {
         className="github-icon"
       >
         <motion.span
-          initial={{ opacity: 0, y: 10 }}
-          whileHover={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 1, y: 10 }}
           transition={{ duration: 0.3 }}
+          
         >
-          <FontAwesomeIcon icon={faGithub} className="icon" />
+          <FaLinkedinIn/>
+          
         </motion.span>
       </motion.a>
       <motion.p
-        initial={{ opacity: 0, y: -20 }}
+        initial={{ opacity: 1, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.8 }}
         className="contact-info"
       >
-        contact me at:
+        Contact me at:
       </motion.p>
 
       <motion.p
