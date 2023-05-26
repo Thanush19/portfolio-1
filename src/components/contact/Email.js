@@ -1,5 +1,7 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import emailjs from 'emailjs-com';
+import './email.css';
 
 function ContactForm() {
   const sendEmail = (e) => {
@@ -16,18 +18,67 @@ function ContactForm() {
   };
 
   return (
-    <form onSubmit={sendEmail}>
-      <label>Name:</label>
-      <input type="text" name="name" />
+    <motion.form
+      initial={{ opacity: 0, y: 50 }} // Initial animation properties
+      animate={{ opacity: 1, y: 0 }} // Animation properties when component is mounted
+      transition={{ duration: 0.5 }} // Animation duration and easing
+      onSubmit={sendEmail}
+    >
+      <motion.label
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+      >
+        Name:
+      </motion.label>
+      <motion.input
+        type="text"
+        name="name"
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+      />
 
-      <label>Email:</label>
-      <input type="email" name="email" />
+      <motion.label
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.3 }}
+      >
+        Email:
+      </motion.label>
+      <motion.input
+        type="email"
+        name="email"
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.4 }}
+      />
 
-      <label>Message:</label>
-      <textarea name="message" />
+      <motion.label
+        initial={{ opacity: 0, x: -50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+      >
+        Message:
+      </motion.label>
+      <motion.textarea
+        name="message"
+        initial={{ opacity: 0, x: 50 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+      />
 
-      <button type="submit">Send</button>
-    </form>
+      <motion.button
+        type="submit"
+        whileHover={{ scale: 1.1 }} // Scale animation on hover
+        whileTap={{ scale: 0.9 }} // Scale animation on click
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.7 }}
+      >
+        Send
+      </motion.button>
+    </motion.form>
   );
 }
 

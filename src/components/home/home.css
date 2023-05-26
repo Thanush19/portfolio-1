@@ -62,6 +62,7 @@ font-weight: 900;
   top: 0;
   left: 0;
   opacity: 0.2;
+  z-index: 6;
 }
 
 
@@ -73,8 +74,8 @@ font-weight: 900;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2B75E4;
-  -webkit-text-fill-color: #2B75E4;
-  -webkit-text-stroke-color: #2B75E4;
+  /* -webkit-text-fill-color: #2B75E4;
+  -webkit-text-stroke-color: #2B75E4; */
   -webkit-text-stroke-width: 1px;
   position: relative;
   display: inline-block;
@@ -85,6 +86,7 @@ lottie-container{
     align-items: center;
     width: 50%;
     flex: 1;
+    z-index: 5;
 
 
 

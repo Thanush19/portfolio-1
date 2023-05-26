@@ -2,13 +2,19 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    z-index: 1000;
+    position: relative;
+    background-color: rgb(30,30,30);
     
-    background-color: rgb(30, 30, 30);
+   
+ 
 }
 .links {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+
 
     text-decoration: none;
     margin-right: 10px;
@@ -29,5 +35,25 @@
   .link {
     text-decoration: none;
     margin-right: 10px;
-    color: white;
+    color: wheat;
+  }
+  .icon {
+    position: absolute; /* Position the icons absolutely */
+    top: 50%; /* Align icons vertically in the middle */
+     /* Adjust the left position as needed */
+    transform: translateY(-50%); /* Center the icons vertically */
+    display: none;
+    margin-right: 0.5rem;
+  }
+  .link:hover .icon {
+    display: inline-block;
+  }
+  .link p {
+    opacity: 1; /* Ensure the text is initially visible */
+    transition: opacity 0.3s ease; /* Add a smooth transition */
+    transform: scale(0.9); /* Zoom out the link on hover */
+  color: #2B75E4; /* Change the link color on hover */
+  }
+  .link:hover p {
+    opacity: 0; /* Hide the text on hover */
   }
