@@ -11,11 +11,11 @@ import { Application } from '@splinetool/runtime';
 
 
 const Home = () => {
-  useEffect(() => {
-    const canvas = document.getElementById('canvas3d');
-    const app = new Application(canvas);
-    app.load('https://prod.spline.design/KjU4kC6sOmHeYQIv/scene.splinecode');
-  }, []);
+  // useEffect(() => {
+  //   const canvas = document.getElementById('canvas3d');
+  //   const app = new Application(canvas);
+  //   app.load('https://prod.spline.design/KjU4kC6sOmHeYQIv/scene.splinecode');
+  // }, []);
 
   const professionText = 'Full Stack Developer';
 
@@ -33,7 +33,7 @@ const Home = () => {
 
   return (
     <div className='container'>
-      <canvas id="canvas3d" className="canvas"></canvas>
+      {/* <canvas id="canvas3d" className="canvas"></canvas> */}
 
       <div className="content">
         <p className='name'>Hi, I'm Thanush</p>

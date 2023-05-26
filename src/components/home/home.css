@@ -75,7 +75,7 @@ font-weight: 900;
   color: #2B75E4;
   -webkit-text-fill-color: #2B75E4;
   -webkit-text-stroke-color: #2B75E4;
-  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-width: 1px;
   position: relative;
   display: inline-block;
   overflow: hidden;
@@ -116,6 +116,20 @@ lottie-container{
   }
 
   .lottie-container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1080px) {
+  .container {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  lottie-container {
     width: 100%;
   }
 }
