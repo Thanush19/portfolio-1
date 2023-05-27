@@ -1,0 +1,52 @@
+.skills {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .skills .next-card {
+    width: 400px;
+    margin: 20px;
+  }
+  
+  .skills h1 {
+    text-align: center;
+  
+  }
+  
+  .skills .icon-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+  
+  .skills .icon-text p {
+    margin: 0 8px;
+  }
+  
+  .skills .icon-text .skill-icon {
+    width: 24px;
+    height: 24px;
+  }
+ 
+  
+  
+  
+  
+  .skills .icon-wrapper {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  
+  .skills .icon-wrapper .skill-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+  }
+  .skills .icon-text h1:hover {
+    color: blue;
+    text-decoration: underline;
+  }
