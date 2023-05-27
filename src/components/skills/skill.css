@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    flex-direction: column;
   }
   
   .skills .next-card {
@@ -38,15 +39,64 @@
   .skills .icon-wrapper {
     display: flex;
     align-items: center;
-    margin-bottom: 4px;
+    margin-bottom: 10px;
+
   }
   
   .skills .icon-wrapper .skill-icon {
     width: 24px;
     height: 24px;
     margin-right: 8px;
+    margin-bottom: 10px;
+
   }
-  .skills .icon-text h1:hover {
-    color: blue;
-    text-decoration: underline;
+p{
+  transition: tranform;
+}
+p:hover{
+  transform: scale3d(2);
+}
+  .hoverable-card ,h1:hover {
+    color: #2B75E4;
+  }
+  .hoverable-card {
+    transition: transform color background-color  0.3s;
+  }
+
+  .hoverable-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    color: rgb(10,10,10);
+    background-color: #f2f2f2;
+
+  }
+  .hoverable-card .skill-icon:hover {
+    animation: shake 0.5s infinite;
+  }
+  @keyframes shake {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-20deg);
+    }
+    75% {
+      transform: rotate(20deg);
+    }
+    100% {
+      transform: rotate(0deg);
+    }
+  } 
+  @media (max-width: 1080px) {
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .lottie-container {
+      margin-bottom: 2000px;
+    }
   }

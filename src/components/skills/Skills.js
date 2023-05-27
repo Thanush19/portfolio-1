@@ -14,9 +14,14 @@ const Skills = () => {
 
   return (
     <div className="skills">
+
       <Card
-        variant={activeCard === 'programming-lang' ? 'primary' : 'bordered'}
-        onClick={() => handleCardClick('programming-lang')}
+        variant={activeCard === 'programming-lang' ? 'primary' : ''}
+        onClick={() => handleCardClick('programming-lang')
+      
+
+      }
+      className="hoverable-card"
       >
         <Card.Body>
           <h1>Programming Language</h1>
@@ -26,31 +31,58 @@ const Skills = () => {
           </div>
         </Card.Body>
       </Card>
+      <Card.Divider />
+
 
       <Card
-        variant={activeCard === 'front-end' ? 'primary' : 'bordered'}
+        variant={activeCard === 'front-end' ? 'primary' : ''}
         onClick={() => handleCardClick('front-end')}
+        className="hoverable-card"
+
+        
+
       >
         <Card.Body>
           <h1>Front-End</h1>
           <div className="icon-text">
-            <FontAwesomeIcon icon={faHtml5} className="skill-icon" />
-            <p>HTML</p>
-            <FontAwesomeIcon icon={faCss3} className="skill-icon" />
-            <p>CSS</p>
+            <div className="icon-wrapper">
+              <FontAwesomeIcon icon={faHtml5} className="skill-icon" />
+              <p>HTML</p>
+            </div>
+            <div className="icon-wrapper">
+
+              <FontAwesomeIcon icon={faCss3} className="skill-icon" />
+              <p>CSS</p>
+            </div>
+            <div className="icon-wrapper">
+
             <p>Tailwind CSS</p>
+            </div>
+            <div className="icon-wrapper">
+
             <FontAwesomeIcon icon={faJs} className="skill-icon" />
             <p>JavaScript</p>
+            </div>
+            <div className="icon-wrapper">
+
             <FontAwesomeIcon icon={faReact} className="skill-icon" />
             <p>React.js</p>
+            </div>
+
+           
           </div>
         </Card.Body>
       </Card>
+      <Card.Divider />
+
+
       <Card
-  variant={activeCard === 'back-end' ? 'primary' : 'bordered'}
+  variant={activeCard === 'back-end' ? 'primary' : ''}
   onClick={() => handleCardClick('back-end')}
+  className="hoverable-card"
+
 >
-  <Card.Body>
+  <Card.Body >
     <h1>Back-end</h1>
     <div className="icon-text">
       <div className="icon-wrapper">
@@ -63,11 +95,13 @@ const Skills = () => {
       </div>
       <div className="icon-wrapper">
         <FontAwesomeIcon icon={faDatabase} className="skill-icon" />
-        <p>Database</p>
+        <p>PostGre sql</p>
       </div>
     </div>
   </Card.Body>
 </Card>
+<Card.Divider />
+
 
     </div>
   );
