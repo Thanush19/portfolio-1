@@ -3,8 +3,8 @@ import './home.css'
 import photo from '../../assets/thanush-n-bg.png'
 import lottie from '../../assets/coding1.json'
 import { motion, useAnimation  } from 'framer-motion';
-import Lottie from 'lottie-react-web';
 import { Application } from '@splinetool/runtime';
+import lottieGif from '../../assets/lottie-gif.gif'
 
 
 
@@ -73,14 +73,9 @@ const Home = () => {
       <motion.div />
 
       <div className="lottie-container">
-        <Lottie
-          options={{
-            animationData: lottie,
-            // Additional options if needed
-          }}
-          width={400} // Adjust the width and height to fit your desired dimensions
-          height={400}
-        />
+        <img src={lottieGif} alt="Lottie GIF" width={400} height={400} />
+
+
       </div>
 
     </div>
