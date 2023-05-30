@@ -1,102 +1,57 @@
+*{
+  color: white;
+}
+.skills{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding-left: 20px;
+  flex-direction: column;
+}
+.front-end, .back-end{
+  flex-direction: column;
+
+}
+h1{
+  transition: background-color 0.3s ease;
+  color: wheat;
+
+
+}
+h1:hover {
+  color: rgb(255, 167, 5);
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+h2{
+  color: rgb(126, 126, 244);
+  transition: background-color 0.3s ease-out;
+}
+h2:hover {
+  color: rgb(28, 28, 164);
+}
 .skills {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  
-  .skills .next-card {
-    width: 400px;
-    margin: 20px;
-  }
-  
-  .skills h1 {
-    text-align: center;
-  
-  }
-  
-  .skills .icon-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 8px;
-  }
-  
-  .skills .icon-text p {
-    margin: 0 8px;
-  }
-  
-  .skills .icon-text .skill-icon {
-    width: 24px;
-    height: 24px;
-  }
- 
-  
-  
-  
-  
-  .skills .icon-wrapper {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-
-  }
-  
-  .skills .icon-wrapper .skill-icon {
-    width: 24px;
-    height: 24px;
-    margin-right: 8px;
-    margin-bottom: 10px;
-
-  }
-p{
-  transition: tranform;
+  text-align: center;
 }
-p:hover{
-  transform: scale3d(2);
+
+.skill-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  cursor: pointer;
 }
-  .hoverable-card ,h1:hover {
-    color: #2B75E4;
-  }
-  .hoverable-card {
-    transition: transform color background-color  0.3s;
-  }
 
-  .hoverable-card:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    color: rgb(10,10,10);
-    background-color: #f2f2f2;
+.skill-icon:hover {
+  transform: rotateY(180deg);
+  color: wheat;
 
-  }
-  .hoverable-card .skill-icon:hover {
-    animation: shake 0.5s infinite;
-  }
-  @keyframes shake {
-    0% {
-      transform: rotate(0deg);
-    }
-    25% {
-      transform: rotate(-20deg);
-    }
-    75% {
-      transform: rotate(20deg);
-    }
-    100% {
-      transform: rotate(0deg);
-    }
-  } 
-  @media (max-width: 1080px) {
-    .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+}
 
-    .lottie-container {
-      margin-bottom: 2000px;
-    }
-  }
+.hovered {
+  transform: rotateY(180deg);
+
+}

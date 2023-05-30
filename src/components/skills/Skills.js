@@ -1,108 +1,101 @@
-import React, { useState } from 'react';
-import { Card, Text } from '@nextui-org/react';
+import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faJava, faHtml5, faCss3, faJs, faReact, faNode } from '@fortawesome/free-brands-svg-icons';
-import { faDatabase } from '@fortawesome/free-solid-svg-icons';
-import './skill.css'
+import {
+  faJava,
+  faHtml5,
+  faCss3,
+  faJs,
+  faReact,
+  faNode,
+} from '@fortawesome/free-brands-svg-icons';
+import {faDatabase} from '@fortawesome/free-solid-svg-icons';
+ import './skill.css';
 
 const Skills = () => {
-  const [activeCard, setActiveCard] = useState('');
+  const [hoveredIcon, setHoveredIcon] = useState(null);
 
-  const handleCardClick = (category) => {
-    setActiveCard(activeCard === category ? '' : category);
+  const handleIconHover = (icon) => {
+    setHoveredIcon(icon);
+  };
+
+  const handleIconLeave = () => {
+    setHoveredIcon(null);
   };
 
   return (
     <div className="skills">
-
-      <Card
-        variant={activeCard === 'programming-lang' ? 'primary' : ''}
-        onClick={() => handleCardClick('programming-lang')
-      
-
-      }
-      className="hoverable-card"
-      >
-        <Card.Body>
-          <h1>Programming Language</h1>
-          <div className="icon-text">
-            <FontAwesomeIcon icon={faJava} className="skill-icon" />
-            <p>Java</p>
-          </div>
-        </Card.Body>
-      </Card>
-      <Card.Divider />
-
-
-      <Card
-        variant={activeCard === 'front-end' ? 'primary' : ''}
-        onClick={() => handleCardClick('front-end')}
-        className="hoverable-card"
-
-        
-
-      >
-        <Card.Body>
-          <h1>Front-End</h1>
-          <div className="icon-text">
-            <div className="icon-wrapper">
-              <FontAwesomeIcon icon={faHtml5} className="skill-icon" />
-              <p>HTML</p>
-            </div>
-            <div className="icon-wrapper">
-
-              <FontAwesomeIcon icon={faCss3} className="skill-icon" />
-              <p>CSS</p>
-            </div>
-            <div className="icon-wrapper">
-
-            <p>Tailwind CSS</p>
-            </div>
-            <div className="icon-wrapper">
-
-            <FontAwesomeIcon icon={faJs} className="skill-icon" />
-            <p>JavaScript</p>
-            </div>
-            <div className="icon-wrapper">
-
-            <FontAwesomeIcon icon={faReact} className="skill-icon" />
-            <p>React.js</p>
-            </div>
-
-           
-          </div>
-        </Card.Body>
-      </Card>
-      <Card.Divider />
-
-
-      <Card
-  variant={activeCard === 'back-end' ? 'primary' : ''}
-  onClick={() => handleCardClick('back-end')}
-  className="hoverable-card"
-
->
-  <Card.Body >
-    <h1>Back-end</h1>
-    <div className="icon-text">
-      <div className="icon-wrapper">
-        <FontAwesomeIcon icon={faNode} className="skill-icon" />
-        <p>Node.js</p>
+      <h1>Skills</h1>
+      <div className="prog-lang">
+        <h2>Programming Languages</h2>
+        <div
+          className={`skill-icon ${hoveredIcon === faJava ? 'hovered' : ''}`}
+          onMouseEnter={() => handleIconHover(faJava)}
+          onMouseLeave={handleIconLeave}
+        >
+          <FontAwesomeIcon icon={faJava} />
+          <p> JAVA</p>
+        </div>
+        {/* Add other programming languages icons */}
       </div>
-      <div className="icon-wrapper">
-        <FontAwesomeIcon icon={faNode} className="skill-icon" />
-        <p>Express.js</p>
+      <div className="front-end">
+        <h2>Front-End Technologies</h2>
+        <div
+          className={`skill-icon ${hoveredIcon === faHtml5 ? 'hovered' : ''}`}
+          onMouseEnter={() => handleIconHover(faHtml5)}
+          onMouseLeave={handleIconLeave}
+        >
+          <FontAwesomeIcon icon={faHtml5} />
+          <p> HTML</p>
+        </div>
+        <div
+          className={`skill-icon ${hoveredIcon === faCss3 ? 'hovered' : ''}`}
+          onMouseEnter={() => handleIconHover(faCss3)}
+          onMouseLeave={handleIconLeave}
+        >
+          <FontAwesomeIcon icon={faCss3} />
+          <p> CSS</p>
+        </div>
+        <div
+          className={`skill-icon ${hoveredIcon === faJs ? 'hovered' : ''}`}
+          onMouseEnter={() => handleIconHover(faJs)}
+          onMouseLeave={handleIconLeave}
+        >
+          <FontAwesomeIcon icon={faJs} />
+          <p> JAVASCRIPT</p>
+        </div>
+        <div
+          className={`skill-icon ${hoveredIcon === faReact ? 'hovered' : ''}`}
+          onMouseEnter={() => handleIconHover(faReact)}
+          onMouseLeave={handleIconLeave}
+        >
+          <FontAwesomeIcon icon={faReact} />
+          <p> REACT JS</p>
+        </div>
+        {/* Add other front-end technologies icons */}
       </div>
-      <div className="icon-wrapper">
-        <FontAwesomeIcon icon={faDatabase} className="skill-icon" />
-        <p>PostGre sql</p>
+      <div className="back-end">
+        <h2>Back-End Technologies</h2>
+        <div
+          className={`skill-icon ${hoveredIcon === faNode ? 'hovered' : ''}`}
+          onMouseEnter={() => handleIconHover(faNode)}
+          onMouseLeave={handleIconLeave}
+        >
+          <FontAwesomeIcon icon={faNode} />
+          <p>NODE JS</p>
+        </div>
+        <div
+          className={`skill-icon ${
+            hoveredIcon === faDatabase ? 'hovered' : ''
+          }`}
+          onMouseEnter={() => handleIconHover(faDatabase)}
+          onMouseLeave={handleIconLeave}
+        >
+          <FontAwesomeIcon icon={faDatabase} />
+          <p>POSTGRESQL</p>
+        </div>
+        {/* Add other back-end technologies
+        {/* Add other back-end technologies icons */}
       </div>
-    </div>
-  </Card.Body>
-</Card>
-<Card.Divider />
-
-
     </div>
   );
 };

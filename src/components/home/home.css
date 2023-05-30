@@ -1,4 +1,4 @@
-.conatiner{
+.container{
     display: flex;
     align-items: center;
     background-color: rgb(30, 30, 30);
@@ -8,11 +8,21 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.profession {
+  color: #ffffff;
+  font-size: 2.5rem;
 
 }
+
 .content, .lottie {
   margin: 10px; /* Add margin around the elements */
   text-align: center; /* Center the text horizontally */
+  position: relative;
+  /* z-index: 1; */
 }
 .name {
   font-size: 40px;
@@ -54,9 +64,9 @@
   }
 }
 .tagline {
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing-effect 3s steps(40) infinite;
+  font-size: 1.2rem;
+  color: #ffffff;
+ 
 }
 
 @keyframes typing-effect {

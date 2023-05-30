@@ -11,7 +11,6 @@ import lottieGif from '../../assets/lottie-gif.gif'
 
 
 
-
 const Home = () => {
   //  useEffect(() => {
   //   const canvas = document.getElementById('canvas3d');
@@ -36,28 +35,66 @@ const Home = () => {
   const professionRef = useRef(null);
   const taglineRef = useRef(null);
 
+  // useEffect(() => {
+  //   gsap.fromTo(
+  //     [nameRef.current, professionRef.current, taglineRef.current],
+  //     { opacity: 0, y: 50 },
+  //     { opacity: 1, y: 0, duration: 1, stagger: 0.3 }
+  //   );
+  // }, []);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     nameRef.current.classList.toggle('shake');
+  //   }, 3000);
+
+  //   return () => {
+  //     clearInterval(interval);
+  //   };
+  // }, []);
   useEffect(() => {
     gsap.fromTo(
-      [nameRef.current, professionRef.current, taglineRef.current],
+      professionRef.current,
       { opacity: 0, y: 50 },
-      { opacity: 1, y: 0, duration: 1, stagger: 0.3 }
+      { opacity: 1, y: 0, duration: 1, delay: 0.5 }
+    );
+
+    gsap.fromTo(
+      professionRef.current,
+      { scaleX: 0 },
+      { scaleX: 1, duration: 1, delay: 0.5, ease: 'power2.out' }
     );
   }, []);
+  
   useEffect(() => {
-    const interval = setInterval(() => {
-      nameRef.current.classList.toggle('shake');
-    }, 3000);
+    const tagline = taglineRef.current;
+    const words = tagline.innerText.split(' ');
 
-    return () => {
-      clearInterval(interval);
-    };
+    tagline.innerHTML = ''; // Clear the existing text
+
+    words.forEach((word, index) => {
+      const wordSpan = document.createElement('span');
+      wordSpan.textContent = `${word} `;
+      wordSpan.style.opacity = 0;
+      tagline.appendChild(wordSpan);
+
+      gsap.to(wordSpan, {
+        opacity: 1,
+        duration: 1,
+        delay: index * 0.2,
+        ease: 'power2.out',
+      });
+    });
   }, []);
 
   return (
     <div className="container">
+      <video src="../../"autoPlay muted loop className="background-video"></video>
       <div className="content">
         <p ref={nameRef} className="name">
-          👋 Hello, This is Thanush
+          👋 
+        </p>
+        <p className='name'>
+        Hello, This is Thanush
         </p>
         <p ref={professionRef} className="profession">
           Full Stack Developer

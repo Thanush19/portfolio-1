@@ -44,6 +44,7 @@
     transform: translateY(-50%); /* Center the icons vertically */
     display: none;
     margin-right: 0.5rem;
+    size: 0.5rem;
   }
   .link:hover .icon {
     display: inline-block;
