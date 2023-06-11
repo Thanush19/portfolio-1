@@ -91,7 +91,7 @@ const Skills = () => {
           onMouseLeave={handleIconLeave}
         >
           <FontAwesomeIcon icon={faDatabase} />
-          <p>POSTGRESQL</p>
+          <p>MONGODB</p>
         </div>
         {/* Add other back-end technologies
         {/* Add other back-end technologies icons */}
