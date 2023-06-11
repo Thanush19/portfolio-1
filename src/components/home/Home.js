@@ -90,9 +90,7 @@ const Home = () => {
     <div className="container">
       <video src="../../"autoPlay muted loop className="background-video"></video>
       <div className="content">
-        <p ref={nameRef} className="name">
-          👋 
-        </p>
+       
         <p className='name'>
         Hello, This is Thanush
         </p>
@@ -104,7 +102,7 @@ const Home = () => {
         </p>
       </div>
       <div className="lottie">
-        <img src={lottieGif} alt="Lottie GIF" width={400} height={400} />
+        <img src={lottieGif} alt="Lottie GIF"  />
       </div>
     </div>
   );
